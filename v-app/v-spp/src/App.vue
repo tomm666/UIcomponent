@@ -1,13 +1,14 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <div id="nav" style="font-size: 30px">
       <!--<router-link to="/">Home</router-link> |-->
-      <!--<router-link to="/about">About</router-link>-->
-			<router-link to="/input-number">数字输入组件</router-link>
-
+      <!-- <router-link to="/about">About</router-link> -->
+			<router-link to="/input">数字输入组件</router-link> <br>
+			<router-link :to="{path: '/tabs'}">标签页组件</router-link>
     </div>
-			<input-number :max="50" :min="0" v-model="value" :step="5"/>
-    <router-view />
+		<hr>
+		<router-view />
+    
   </div>
 </template>
 
@@ -21,7 +22,7 @@ import inputNumber from "@/views/input-number/index.vue"; // @ is an alias to /s
   }
 })
 export default class Home extends Vue {
-	value: number = 5;
+	value: number = 5 ;
 }
 </script>
 

@@ -1,8 +1,7 @@
 <template>
-  <div class="home">
-		
-		<!-- <router-view /> -->
-  </div>
+	<div class="main layout">
+		<input-number :max="50" :min="0" v-model="value" :step="5"/>
+	</div>
 </template>
 
 <script lang="ts">
@@ -14,7 +13,10 @@ import InputNumber from "@/views/input-number/index.vue"; // @ is an alias to /s
     InputNumber
   }
 })
-export default class Home extends Vue  {
-	value: number = 5;
+export default class Index extends Vue  {
+value: number = 5;
 }
 </script>
+
+<style lang="less" scoped>
+</style>
